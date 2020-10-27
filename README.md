@@ -4,7 +4,7 @@ CLI to encode a recovery phrase into a text according to a secret code
 
 ## Algorithm
 
-You can hide your 24-words recovery phrase (which corresponds to your private key) into a huge list of words according to a secret code.
+You can hide your `24-words recovery phrase` (which corresponds to your private key) into a huge list of words according to a `secret code`.
 
 Take:
 - your (brain-stored) secret code composed of numbers such as `39421311` (0 is not valid)
@@ -27,6 +27,8 @@ Take:
 ... until the 24th word of your 24-words list
 
 ## Usage
+
+`recoveryph` outputs encoded/decoded data to stdout. To have it stored on disk, you just have to redirect by appending `> ~/my-file.txt`
 
 ### Encode your recovery phrase into a file
 
