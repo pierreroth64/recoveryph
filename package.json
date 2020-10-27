@@ -1,0 +1,28 @@
+{
+  "name": "recoveryph",
+  "version": "1.0.0",
+  "description": "CLI to encode a recovery phrase into a text according to a secret code",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write \"**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierreroth64/recoveryph.git"
+  },
+  "keywords": [
+    "recovery",
+    "phrase",
+    "encoding"
+  ],
+  "author": "pierreroth64@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pierreroth64/recoveryph/issues"
+  },
+  "homepage": "https://github.com/pierreroth64/recoveryph#readme",
+  "dependencies": {
+    "commander": "6.2.0"
+  }
+}
