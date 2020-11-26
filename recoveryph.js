@@ -13,9 +13,11 @@ program
   )
   .option('-n, --nb-of-words [NB_OF_WORDS]', 'number of words to encode', 24)
   .action(async (options) => {
-    const { askWords } = bootstrap(options);
+    const { askWords, askCode, debug } = bootstrap(options);
     const words = await askWords(options.nbOfWords);
-    console.log(words);
+    const code = await askCode();
+    debug('words:', words);
+    debug('code:', code);
   });
 
 program.version(version).parse(process.argv);
