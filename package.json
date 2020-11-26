@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/pierreroth64/recoveryph#readme",
   "dependencies": {
+    "chalk": "4.1.0",
     "commander": "6.2.0",
     "debug": "4.3.1",
     "inquirer": "7.3.3",
