@@ -12,16 +12,30 @@ program
     false
   )
   .option('-n, --nb-of-words [NB_OF_WORDS]', 'number of words to encode', 24)
+  .option(
+    '-o, --output-file [OUTPUT_FILE]',
+    'file where to write encoded output',
+    undefined
+  )
   .action(async (options) => {
-    const { askWords, askCode, debug, encodeWords, displayEncoded } = bootstrap(
-      options
-    );
+    const {
+      askWords,
+      askCode,
+      debug,
+      encodeWords,
+      displayEncoded,
+      mayWriteToFile,
+    } = bootstrap(options);
     const words = await askWords(options.nbOfWords);
     const code = await askCode();
     const encoded = await encodeWords({ words, code });
     debug('words:', words);
     debug('code:', code);
     displayEncoded(encoded);
+    await mayWriteToFile(
+      options.outputFile,
+      encoded.map((e) => e.word).join(' ')
+    );
   });
 
 program.version(version).parse(process.argv);
