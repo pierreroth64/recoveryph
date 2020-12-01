@@ -13,6 +13,11 @@ program
   )
   .option('-n, --nb-of-words [NB_OF_WORDS]', 'number of words to encode', 24)
   .option(
+    '-w, --words [WORDS]',
+    'comma-separated list of words to encode',
+    undefined
+  )
+  .option(
     '-o, --output-file [OUTPUT_FILE]',
     'file where to write encoded output',
     undefined
